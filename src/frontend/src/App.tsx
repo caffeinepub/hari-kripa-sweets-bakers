@@ -33,6 +33,7 @@ const MENU_CATEGORIES = [
     emoji: "🥘",
     color: "#C68A1C",
     bg: "#FDF3DC",
+    image: "/assets/generated/menu-main-course.dim_600x400.jpg",
     items: [
       "Aloo Paratha (Single / Double) 🧈",
       "Chola Bhatura 🍛",
@@ -46,6 +47,7 @@ const MENU_CATEGORIES = [
     emoji: "☕",
     color: "#6A3B1D",
     bg: "#F5EBE0",
+    image: "/assets/generated/menu-beverages.dim_600x400.jpg",
     items: [
       "Special Cutting Chai ☕",
       "Full Glass Chai",
@@ -59,6 +61,7 @@ const MENU_CATEGORIES = [
     emoji: "🍜",
     color: "#C85E1A",
     bg: "#FDF0E8",
+    image: "/assets/generated/menu-fast-food.dim_600x400.jpg",
     items: [
       "Veg Manchurian (Dry / Gravy) 🌶️",
       "Noodles 🍝",
@@ -72,6 +75,7 @@ const MENU_CATEGORIES = [
     emoji: "🍬",
     color: "#7E2B53",
     bg: "#F8EBF2",
+    image: "/assets/generated/menu-sweets.dim_600x400.jpg",
     items: [
       "Fresh Mithai (Seasonal) 🍮",
       "Rasgulla",
@@ -435,7 +439,7 @@ function About() {
           <div className="grid grid-cols-2 gap-4">
             {[
               { emoji: "🌿", label: "100% Veg", sub: "No non-veg ever" },
-              { emoji: "🕐", label: "Since 2015", sub: "Trusted for years" },
+              { emoji: "🕐", label: "Since 2025", sub: "Trusted for years" },
               {
                 emoji: "👨‍🍳",
                 label: "Expert Chefs",
@@ -502,6 +506,12 @@ function MenuSection() {
                   {cat.emoji} {cat.title}
                 </p>
               </div>
+              {/* Food image */}
+              <img
+                src={cat.image}
+                alt={cat.title}
+                className="w-full h-40 object-cover"
+              />
               {/* Items */}
               <div className="bg-white px-5 py-4 space-y-2">
                 {cat.items.map((item) => (
